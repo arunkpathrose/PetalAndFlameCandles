@@ -1,0 +1,102 @@
+/* Base styles */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+#hero {
+  background: url('images/tealight.jpg') center/cover no-repeat;
+  color: #222;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+}
+
+/* Optional overlay for better text readability */
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.6); /* light overlay */
+}
+
+#hero h2, #hero p {
+  position: relative;
+  z-index: 1; /* ensures text appears above overlay */
+}}
+
+/* Gallery */
+#gallery {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Sections */
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h2 {
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+/* Footer */
+footer {
+  background: #fafafa;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #777;
+}
